@@ -1,0 +1,11 @@
+h1 {
+    color: rgb(5, 87, 201);
+    background-color : red;
+    text-align: center;
+}
+
+.subtitulo {
+    color: rgb(50, 177, 11);
+    background-color: blueviolet;
+    text-align: center;
+}

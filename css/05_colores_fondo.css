@@ -1,0 +1,15 @@
+.fondo{
+    color: darkorange;
+    background-image: url("imagen/imagen1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: aquamarine;
+    padding: 40px;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 44px;
+}
+
+.titulo{
+    color: blue;
+}

@@ -1,0 +1,42 @@
+.layout{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+}
+
+header{
+    grid-area: header;
+    background-color: blueviolet;
+    padding: 20px;
+    color: aliceblue;
+    text-align: center;
+}
+
+aside{
+    grid-template-areas: aside;
+    background-color: aqua;
+    padding: 10px;
+}
+
+main{
+    grid-template-areas: main;
+    background-color: rgb(30, 73, 73);
+    padding: 10px;
+}
+
+footer{
+    grid-template-areas: footer;
+    background-color: blue;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+.layout > *{
+    border: 2px solid black;
+    font-size: 1.53em;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+    padding: 20px;
+}

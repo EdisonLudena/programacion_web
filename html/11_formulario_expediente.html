@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario2</title>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr >
+                <th>
+                    <label for="marca">Marca Celular</label>
+                    <input type="text" id="marca" nombre="marca">
+                </th>
+                <th>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" nombre="fecha">
+                </th>
+                <th>
+                    <label for="tipo">Tipo Unidad</label><br>
+                    <input type="radio" id="tipo_unidad" nombre="tipo_unidad"><label for="unidad">Unidad</label>
+                    <input type="radio" id="paquete" nombre="paquete"><label for="paquete">Paquete</label>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="proveedor">Proveedor</label>
+                    <select id="proveedor" name="proveedor">
+                        <option value="sel">Seleccione</option>
+                        <option value="a_tech">A-tech</option>
+                        <option value="global">Global</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Guardar celular">
+        <input type="reset" value="Borrar formulario">
+    </form>
+</body>
+</html>
