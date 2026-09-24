@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script src="04_eventos.js" defer></script>
+</head>
+<body>
+    <h1>Gestion de inventario</h1>
+    <div id="contenedor"></div>
+
+    <button id="crear">Agregar Producto</button>
+    <button id="eliminar">Eliminar producto</button>
+
+    <button onclick="alert('Bienvenido al sistema')">
+        Saludo con Javascript inline
+    </button>
+
+    <button onclick="mostrarMensaje()">
+        Saludo desde uan funcion
+    </button>
+
+    <p id="parrafo">Haz doble click para ver detalles</p>
+
+    <form id="formulario" style="margin-top: 20px;">
+        <input type="text" id="nombre" placeholder="Escribe el nombre del Producto">
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

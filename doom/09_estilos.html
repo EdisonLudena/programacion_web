@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="09_estilos.js" defer></script>
+    <style>
+        #cuadro {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventario</h1>
+    <h3>Aumento de tamanio</h3>
+
+    <div id ="cuadro" style="width: 100px; height: 100px;"></div>
+
+    <div style="margin-top: 20px;">
+        <button onclick="cambiarColor()">Cambiar color</button>
+        <button onclick="aumentarTamano()">Aumentar tamanio</button>
+        <button onclick="disminuir()">Disminuir</button>
+        <button onclick="reinciar()">Restablecer</button>
+        
+
+    </div>
+</body>
+</html>
