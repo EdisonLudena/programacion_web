@@ -1,0 +1,201 @@
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9; 
+    margin: 0; 
+    padding: 40px 20px;
+}
+
+
+.panel { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    max-width: 680px; 
+    margin: 0 auto; 
+}
+
+h1 { 
+    color: #d35400; 
+    text-align: center;
+    margin-bottom: 5px; 
+}
+
+#subtitulo { 
+    text-align: center;
+    color: #555; 
+    margin-top: 0; 
+    margin-bottom: 25px; 
+}
+
+.grid-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+}
+
+.form-grupo { 
+    margin-bottom: 15px; 
+}
+
+
+.form-grupo.full-width {
+    grid-column: span 2; /
+}
+
+
+label { 
+    display: block; 
+    font-weight: bold; 
+    margin-bottom: 6px; 
+    color: #333;
+    font-size: 14px; 
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"] { 
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    background-color: #fff; 
+}
+
+input[type="color"] {
+    width: 100%; 
+    height: 40px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    cursor: pointer; 
+    background: none; 
+    padding: 2px; 
+}
+
+input:focus {
+    border-color: #d35400;
+    outline: none;
+}
+
+button.btn-registrar { 
+    background-color: #d35400; 
+    color: white; 
+    border: none; 
+    padding: 12px;
+    cursor: pointer; 
+    border-radius: 5px;
+    font-weight: bold; 
+    font-size: 16px; 
+    width: 100%; 
+    margin-top: 10px; 
+    transition: background-color 0.2s;
+}
+
+button.btn-registrar:hover { 
+    background-color: #a04000;
+}
+
+#mensajeAlerta { 
+    margin-top: 15px; 
+    font-weight: bold; 
+    text-align: center; 
+    min-height: 20px;
+}
+
+hr { 
+    border: 0;
+    height: 1px; 
+    background: #e0e0e0;
+    margin: 25px 0; 
+}
+
+ul { 
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+}
+
+.item-producto { 
+    margin-top: 10px;
+    padding: 12px 15px;
+    border-left: 6px solid #d35400; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease; 
+}
+
+.info-contenedor {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+}
+
+.img-producto {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 6px; 
+    border: 1px solid #ccc; 
+    background-color: #fff;
+}
+
+.detalles-producto {
+    display: flex;
+    flex-direction: column; 
+    gap: 3px; 
+}
+
+.titulo-producto {
+    font-weight: bold;
+    color: #2c3e50; 
+    font-size: 15px; 
+}
+
+.meta-producto {
+    font-size: 13px; 
+    color: #555; 
+}
+
+.precio-tag {
+    color: #27ae60; 
+    font-weight: bold;
+}
+
+.acciones-contenedor {
+    display: flex; 
+    gap: 8px; 
+}
+
+.btn-editar {
+    background-color: #2980b9; 
+    color: white; 
+    border: none;
+    padding: 6px 12px; 
+    cursor: pointer;
+    border-radius: 4px; 
+    font-weight: bold; 
+}
+
+.btn-editar:hover {
+    background-color: #1f6391; 
+}
+
+.btn-eliminar { 
+    background-color: #e74c3c; 
+    color: white;
+    border: none;
+    padding: 6px 12px; 
+    cursor: pointer; 
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-eliminar:hover { 
+    background-color: #c0392b;
+}

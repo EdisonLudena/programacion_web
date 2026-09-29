@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Inventario TECH</title>
+    <link rel="stylesheet" href="integrador.css">
+    <script src="integrador.js" defer></script>
+</head>
+<body>
+
+<div class="panel">
+    <h1 id="tituloPrincipal">Inventario TECH</h1>
+    <p id="subtitulo">Panel de gestión integral: CRUD, Precios, Fechas e Imágenes</p>
+    
+    <div class="grid-formulario">
+        <div class="form-grupo full-width">
+            <label for="nombreProducto">Nombre del Producto:</label>
+            <input type="text" id="nombreProducto" placeholder="Ej. Teclado Mecánico RGB">
+        </div>
+        
+        <div class="form-grupo">
+            <label for="stockProducto">Stock Inicial:</label>
+            <input type="number" id="stockProducto" placeholder="Ej. 10" min="0">
+        </div>
+
+        <div class="form-grupo">
+            <label for="precioProducto">Precio ($):</label>
+            <input type="number" id="precioProducto" placeholder="Ej. 85.50" min="0" step="0.01">
+        </div>
+
+        <div class="form-grupo">
+            <label for="fechaIngreso">Fecha de Ingreso:</label>
+            <input type="date" id="fechaIngreso">
+        </div>
+
+        <div class="form-grupo">
+            <label for="colorProducto">Color de Tarjeta:</label>
+            <input type="color" id="colorProducto" value="#fff3e0">
+        </div>
+
+        <div class="form-grupo full-width">
+            <label for="imagenProducto">Imagen del Producto:</label>
+            <input type="file" id="imagenProducto" accept="image/*">
+        </div>
+    </div>
+
+    <button type="button" id="btnAgregar" class="btn-registrar">Registrar Producto</button>
+    
+    <p id="mensajeAlerta"></p>
+
+    <hr>
+
+    <h3>Lista de Productos Activos (<span id="contadorStock">0</span>)</h3>
+    <ul id="listaInventario">
+
+    </ul>
+</div>
+
+</body>
+</html>
