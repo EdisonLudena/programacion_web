@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+    <h2>Formulario de Celular</h2>
+    <hr>
+    <div style="max-width: 400px;">
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.as_p}}
+
+            <div style="margin-top: 20px;">
+                <button type="submit">Guardar Celular</button>
+                <a href="{% url 'lista_celulares' %}" style="margin-left: 10px;">Cancelar</a>
+            </div>
+        </form>
+
+    </div>
+{% endblock%}

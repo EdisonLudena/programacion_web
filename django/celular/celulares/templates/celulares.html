@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block title %}
+Lista{% endblock %}
+
+{% block contenido %}
+    <h2>Lista de Celulares</h2>
+
+    <table border="1" style="width: 100%; text-align: left;">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Disponible</th>
+                <th>Comprar</th>
+                {% if user.is_staff %}
+                <th>Acciones</th>
+                {% endif%}
+            </tr>
+        </thead>
+        <tbody>
+            {% for celular in celulares %}
+            <tr>
+                <td>{{ celular.marcas }}</td>
+                <td>{{ celular.modelo }}</td>
+                <td>${{ celular.precio }}</td>
+                <td>{{ celular.stock }}</td>
+                <td>{{ celular.disponible|yesno:"Si,No" }}</td>
+
+                {% if user.is_staff %}
+
+                <td>
+                    <a href="{% url 'editar_celulares' celular.pk %}">Editar</a>
+                    <a href="{% url 'eliminar_celulares' celular.pk %}">Eliminar</a>
+                </td>
+
+                {% endif %}
+            </tr>
+            {% empty%}
+            <tr>
+                <td colspan="6">No hay celulares registrados.</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if user.is_staff %}
+        <p><a href="{% url 'crear_celulares' %}">Agregar Nuevo Celular</a></p>
+    {% endif %}
+        <p><a href="{% url 'index' %}"> Regresar al Inicio</a></p>
+
+{% endblock %}

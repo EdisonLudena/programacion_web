@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+
+    <h2>Confirmar Eliminacion</h2>
+    <p>¿Estas seguro de que quieres eliminar el celular?: <strong>{{ object.modelo}}</strong>?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar</button>
+        <a href="{% url 'lista_celulares' %}">Cancelar</a>
+
+    </form>
+
+
+{% endblock %}
