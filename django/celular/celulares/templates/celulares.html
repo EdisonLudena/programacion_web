@@ -29,6 +29,14 @@ Lista{% endblock %}
                 <td>{{ celular.stock }}</td>
                 <td>{{ celular.disponible|yesno:"Si,No" }}</td>
 
+                <td>
+                    {% if celular.stock > 0 %}
+                        <a href="{% url 'realizar_pedido' celular.id %}">Comprar</a>
+                    {% else %}
+                        <span>Agotado</span>
+                    {% endif %}
+                </td>
+
                 {% if user.is_staff %}
 
                 <td>

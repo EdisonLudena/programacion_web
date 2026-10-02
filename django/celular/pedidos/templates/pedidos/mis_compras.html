@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+<div class="container mt-5">
+    <h2>Mis pedidos Realizados</h2>
+    {% if pedidos %}
+    <div class="table-responsive">
+        <table class="table table-hover shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>Fecha y Hora</th>
+                    <th>Celular</th>
+                    <th>Marca</th>
+                    <th>Cantidad</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in pedidos %}
+                <tr>
+                    <td>{{ p.fecha_compra|date:"d/m/Y H:i" }}</td>
+                    <td><strong>{{ p.celular.modelo }}</strong></td>
+                    <td>{{ p.celular.marcas }}</td>
+                    <td>{{ p.cantidad}} unidad(es)</td>
+                    <td>
+                        <span>Procesado</span>
+                    </td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+    </div>
+
+    {% else %}
+    <div>
+        <h4>Aun no tienes pedidos</h4>
+        <p>Parece que nos has comprado nada todavia.</p>
+        <a href="{% url 'index'%}">Ir a Celulares</a>
+    </div>
+    {% endif %}
+
+    <div>
+        <a href="{% url 'index' %}">Volver al Inicio</a>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -6,7 +6,7 @@ class Celulares (models.Model):
     MARCAS = [('nombre', 'Samsung'), ('nombre2', 'Apple')]
     marcas = models.CharField(max_length=20, choices=MARCAS)
     modelo = models.CharField(max_length=20)
-    precio = models.DecimalField(max_digits=4, decimal_places=2) 
+    precio = models.DecimalField(max_digits=6, decimal_places=2) 
     stock= models.IntegerField(default=0)
     descripcion = models.TextField(blank=True, null=True)
     fecha_lanzamiento = models.DateTimeField(auto_now_add=True)
